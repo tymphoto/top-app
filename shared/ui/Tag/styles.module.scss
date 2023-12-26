@@ -1,46 +1,46 @@
 .tag {
-	display: inline-block;
-	box-sizing: border-box;
-	margin-right: 6px;
-	border-radius: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 6px;
+  border-radius: 20px;
 }
 
 .s {
-	padding: 6px 12px;
-	font-size: 12px;
-	line-height: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 .m {
-	padding: 6px 12px;
-	font-size: 14px;
-	line-height: 14px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .ghost {
-	border: 1px solid var(--gray-light);
+  border: 1px solid var(--gray-light);
 }
 
 .red {
-	color: var(--white);
-	background: hsl(0, 100%, 44%);
-	font-weight: bold;
+  font-weight: bold;
+  background: hsl(0, 100%, 44%);
+  color: var(--white);
 }
 
 .grey {
-	color: var(--white);
-	background: #51648C;
-	font-weight: bold;
+  font-weight: bold;
+  background: #51648c;
+  color: var(--white);
 }
 
 .green {
-	color: var(--green);
-	background: var(--green-light);
-	font-weight: bold;
+  font-weight: bold;
+  background: var(--green-light);
+  color: var(--green);
 }
 
 .primary {
-	color: var(--primary);
-	border: 1px solid var(--primary);
-	background: none;
+  border: 1px solid var(--primary);
+  background: none;
+  color: var(--primary);
 }

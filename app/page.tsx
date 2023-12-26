@@ -1,5 +1,5 @@
-import { Button, Htag, Paragraph, Tag } from '@/shared'
-import styles from './page.module.scss'
+import { Button, Htag, Paragraph, Tag } from '@/shared';
+import styles from './page.module.scss';
 
 export default function Home() {
   return (
@@ -32,5 +32,5 @@ export default function Home() {
         hh.ru
       </Tag>
     </main>
-  )
+  );
 }

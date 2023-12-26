@@ -1,9 +1,9 @@
-import styles from './styles.module.css'
+import styles from './styles.module.scss';
 
 export default function Dashboard() {
   return (
-    <main>
+    <main className={styles.main}>
       Dashboard
     </main>
-  )
+  );
 }

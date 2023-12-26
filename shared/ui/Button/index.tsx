@@ -38,5 +38,5 @@ export const Button = ({
         </span>
       )}
     </button>
-  )
+  );
 };

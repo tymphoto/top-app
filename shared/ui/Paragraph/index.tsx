@@ -7,12 +7,12 @@ interface ParagraphProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphE
   children: ReactNode;
 }
 
-export const Paragraph = (
-  { size = 'm',
-    children,
-    className,
-    ...props
-  }: ParagraphProps): JSX.Element => {
+export const Paragraph = ({
+  size = 'm',
+  children,
+  className,
+  ...props
+}: ParagraphProps): JSX.Element => {
   return (
     <p
       className={cn(styles.p, className, {

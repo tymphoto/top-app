@@ -1,12 +1,12 @@
 "use client";
+import { withLayout } from '@/layout';
 import { Button, Htag, Paragraph, Rating, Tag } from '@/shared';
-import styles from './page.module.scss';
 import { useState } from 'react';
 
-export default function Home() {
-  const [rating, setRating] = useState<number>(4)
+function Home() {
+  const [rating, setRating] = useState<number>(4);
   return (
-    <main className={styles.main}>
+    <main>
       <Htag tag='h1'>
         Home
       </Htag>
@@ -42,3 +42,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default withLayout(Home);

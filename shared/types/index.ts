@@ -1,4 +1,4 @@
-export type { PageItem, MenuItem } from "./menu";
+export type { PageItem, MenuItem, FirstLevelMenuItem } from "./menu";
 export type {
   TopPageAdvantage,
   HhData,

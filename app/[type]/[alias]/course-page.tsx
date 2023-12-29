@@ -4,11 +4,12 @@ import {
   type MenuItem,
   type TopPageModel,
   type ProductModel,
+  TopLevelCategory,
 } from '@/shared';
 
 interface CoursePageProps extends Record<string, unknown> {
   menu?: MenuItem[];
-  firstCategory?: number;
+  firstCategory?: TopLevelCategory;
   page?: TopPageModel;
   products?: ProductModel[]
 }

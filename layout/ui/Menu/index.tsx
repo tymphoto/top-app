@@ -3,19 +3,9 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import cn from 'classnames';
 import { AppContext } from '@/context';
-import { FirstLevelMenuItem, PageItem, TopLevelCategory } from '@/shared';
-import CoursesIcon from '@/shared/assets/graduation-hat.svg';
-import CloudIcon from '@/shared/assets/cloud.svg';
-import BookIcon from '@/shared/assets/book.svg';
-import BoxIcon from '@/shared/assets/box.svg';
+import { firstLevelMenu } from '@/helpers';
+import { FirstLevelMenuItem, PageItem } from '@/shared';
 import styles from './styles.module.scss';
-
-const firstLevelMenu: FirstLevelMenuItem[] = [
-  { route: 'courses', name: 'Курсы', icon: <CoursesIcon />, id: TopLevelCategory.Courses },
-  { route: 'services', name: 'Сервисы', icon: <CloudIcon />, id: TopLevelCategory.Services },
-  { route: 'books', name: 'Книги', icon: <BookIcon />, id: TopLevelCategory.Books },
-  { route: 'products', name: 'Продукты', icon: <BoxIcon />, id: TopLevelCategory.Products },
-];
 
 export const Menu = (): JSX.Element => {
   const {

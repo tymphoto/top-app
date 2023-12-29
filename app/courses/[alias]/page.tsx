@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { GetStaticPropsContext } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 import { type TopPageModel, type MenuItem, ProductModel } from '@/shared';
 import CoursePage from './course-page';
-import { ParsedUrlQuery } from 'querystring';
 
 const firstCategory = 0;
 
@@ -40,13 +40,15 @@ export async function generateStaticParams() {
   })));
 }
 
-export default async function Home(
-  { params }: { params: { alias: string } }
-) {
+export default async function Home({
+  params
+}: {
+  params: { alias: string }
+}) {
   const { menu, page, products } = await getPage({ params });
   return (
     <main>
-      <CoursePage menu={menu} page={page} products={products} />
+      <CoursePage menu={menu || []} page={page} products={products} firstCategory={firstCategory} />
     </main>
   );
 }

@@ -6,14 +6,14 @@ import {
   type ProductModel,
 } from '@/shared';
 
-interface CoursePagetProps extends Record<string, unknown> {
+interface CoursePageProps extends Record<string, unknown> {
   menu?: MenuItem[];
   firstCategory?: number;
   page?: TopPageModel;
   products?: ProductModel[]
 }
 
-async function CoursePage({ products }: CoursePagetProps) {
+async function CoursePage({ products }: CoursePageProps) {
   return (
     <>
       {products && products.length}

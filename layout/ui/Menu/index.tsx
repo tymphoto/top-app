@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Link from 'next/link';
 import cn from 'classnames';
 import { AppContext } from '@/context';
 import { FirstLevelMenuItem, PageItem, TopLevelCategory } from '@/shared';
@@ -27,7 +28,7 @@ export const Menu = (): JSX.Element => {
       <>
         {firstLevelMenu.map((el) => (
           <div key={el.route}>
-            <a href={`/${el.route}`}>
+            <Link href={`/${el.route}`}>
               <div className={cn(styles.firstLevel, {
                 [styles.firstLevelActive]: el.id === firstCategory,
               })}>
@@ -36,7 +37,7 @@ export const Menu = (): JSX.Element => {
                   {el.name}
                 </span>
               </div>
-            </a>
+            </Link>
             {el.id === firstCategory && buildSecondLevel(el)}
           </div>
         ))}
@@ -68,14 +69,13 @@ export const Menu = (): JSX.Element => {
     return (
       <div>
         {pages.map((page) => (
-          <a
+          <Link
             href={`/${route}/${page.alias}`}
             className={cn(styles.thirdLevel, {
               [styles.thirdLevelActive]: false,
-            })}
-          >
+            })}>
             {page.category}
-          </a>
+          </Link>
         ))}
       </div>
     );

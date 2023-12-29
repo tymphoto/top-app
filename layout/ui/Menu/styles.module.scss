@@ -46,13 +46,15 @@
 }
 
 .secondLevelBlock {
+  display: none;
   overflow: hidden;
   padding: 0;
-  list-style: none;
   text-transform: none;
+  list-style: none;
 }
 
 .secondLevelBlockOpened {
+  display: block;
   margin-bottom: 10px;
 }
 

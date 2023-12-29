@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import cn from 'classnames';
 import { AppContext } from '@/context';
@@ -19,9 +20,20 @@ const firstLevelMenu: FirstLevelMenuItem[] = [
 export const Menu = (): JSX.Element => {
   const {
     menu,
-    // setMenu,
+    setMenu,
     firstCategory
   } = useContext(AppContext);
+
+  const pathname = usePathname();
+
+  const openSecondLevel = (secondCategory: string) => {
+    setMenu && setMenu(menu.map((el) => {
+      if (el._id.secondCategory === secondCategory) {
+        el.isOpened = !el.isOpened;
+      }
+      return el;
+    }));
+  };
 
   const buildFirstLevel = () => {
     return (
@@ -49,18 +61,26 @@ export const Menu = (): JSX.Element => {
   const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
     return (
       <div className={styles.secondBlock}>
-        {menu.map((el) => (
-          <div key={el._id.secondCategory}>
-            <div className={styles.secondLevel}>
-              {el._id.secondCategory}
-              <div className={cn(styles.secondLevelBlock, {
-                [styles.secondLevelBlockOpened]: el.isOpened
-              })}>
-                {buildThirdLevel(el.pages, menuItem.route)}
+        {menu.map((el) => {
+          if (el.pages.map((pages) => pages.alias).includes(pathname.split('/')[2])) {
+            el.isOpened = true;
+          }
+          return (
+            <div key={el._id.secondCategory}>
+              <div
+                className={styles.secondLevel}
+                onClick={() => openSecondLevel(el._id.secondCategory)}
+              >
+                {el._id.secondCategory}
+                <div className={cn(styles.secondLevelBlock, {
+                  [styles.secondLevelBlockOpened]: el.isOpened,
+                })}>
+                  {buildThirdLevel(el.pages, menuItem.route)}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     );
   };
@@ -72,7 +92,7 @@ export const Menu = (): JSX.Element => {
           <Link
             href={`/${route}/${page.alias}`}
             className={cn(styles.thirdLevel, {
-              [styles.thirdLevelActive]: false,
+              [styles.thirdLevelActive]: `/${route}/${page.alias}` === pathname,
             })}>
             {page.category}
           </Link>

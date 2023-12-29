@@ -1,12 +1,18 @@
 import { FC } from "react";
+import { AppContextProvider, IAppContext } from "@/context";
 import { Layout } from "./Layout";
 
-export const withLayout = <T extends Record<string, unknown>>(Component: FC<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FC<T>) => {
   return function withLayoutComponent(props: T): JSX.Element {
     return (
-      <Layout>
-        <Component {...props} />
-      </Layout>
+      <AppContextProvider
+        menu={props.menu}
+        firstCategory={props.firstCategory}
+      >
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      </AppContextProvider>
     );
   };
 };

@@ -1,5 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styles from './styles.module.scss';
+import { Menu } from '../Menu';
 
 interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> { }
 
@@ -11,7 +12,7 @@ export const Sidebar = ({
       className={styles.Sidebar}
       {...props}
     >
-      Sidebar
+      <Menu />
     </div>
   );
 };

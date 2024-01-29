@@ -1,5 +1,6 @@
 "use client";
 import { withLayout } from '@/layout';
+import { TopPageComponent } from '@/page-components';
 import {
   type MenuItem,
   type TopPageModel,
@@ -11,14 +12,16 @@ interface CoursePageProps extends Record<string, unknown> {
   menu?: MenuItem[];
   firstCategory?: TopLevelCategory;
   page?: TopPageModel;
-  products?: ProductModel[]
+  products?: ProductModel[];
 }
 
-async function CoursePage({ products }: CoursePageProps) {
+async function CoursePage({ firstCategory, page, products }: CoursePageProps) {
   return (
-    <>
-      {products && products.length}
-    </>
+    <TopPageComponent
+      firstCategory={firstCategory}
+      page={page}
+      products={products}
+    />
   );
 }
 

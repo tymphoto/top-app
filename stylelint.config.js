@@ -11,5 +11,6 @@ module.exports = {
     // false positive
     'no-descending-specificity': null,
     'scss/media-feature-value-dollar-variable': null,
+    'color-function-notation': null,
   },
 };

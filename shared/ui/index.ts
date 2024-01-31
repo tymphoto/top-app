@@ -6,3 +6,4 @@ export { HhDataCard } from "./HhDataCard";
 export { Paragraph } from "./Paragraph";
 export { Tag } from "./Tag";
 export { Rating } from "./Rating";
+export { Sort } from './Sort';

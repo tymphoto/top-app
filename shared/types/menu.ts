@@ -21,3 +21,8 @@ export interface FirstLevelMenuItem {
   icon: JSX.Element;
   id: TopLevelCategory;
 }
+
+export enum SortEnum {
+  Rating,
+  Price,
+}

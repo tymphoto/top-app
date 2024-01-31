@@ -1,12 +1,16 @@
+import { useEffect, useReducer } from 'react';
 import {
   Advantages,
   HhDataCard,
   Htag,
   ProductModel,
+  Sort,
+  SortEnum,
   Tag,
   TopLevelCategory,
   TopPageModel
 } from '@/shared';
+import { sortReducer } from './reducer';
 import styles from './styles.module.scss';
 
 interface TopPageComponentProps {
@@ -20,16 +24,19 @@ export const TopPageComponent = ({
   products,
   firstCategory
 }: TopPageComponentProps): JSX.Element => {
-  // const [{ products: sortedProducts, sort }, dispathSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
+  const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
+    sortReducer,
+    { products: products || [], sort: SortEnum.Rating }
+  );
   // const shouldReduceMotion = useReducedMotion();
 
-  // const setSort = (sort: SortEnum) => {
-  //   dispathSort({ type: sort });
-  // };
+  const setSort = (sort: SortEnum) => {
+    dispatchSort({ type: sort });
+  };
 
-  // useEffect(() => {
-  //   dispathSort({ type: 'reset', initialState: products });
-  // }, [products]);
+  useEffect(() => {
+    dispatchSort({ type: 'reset', initialState: products || [] });
+  }, [products]);
 
   return (
     <div className={styles.wrapper}>
@@ -44,11 +51,10 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <span>Сортировка</span>
-        {/* <Sort sort={sort} setSort={setSort} /> */}
+        <Sort sort={sort} setSort={setSort} />
       </div>
       <div role='list'>
-        {products && products.map((p) => (
+        {sortedProducts && sortedProducts.map((p) => (
           <div key={p._id}>
             {p.title}
           </div>
@@ -65,15 +71,18 @@ export const TopPageComponent = ({
       {firstCategory == TopLevelCategory.Courses
         && page?.hh
         && <HhDataCard {...page.hh} />}
-      {page?.advantages && page.advantages.length > 0 && <>
-        <Htag tag='h2'>Преимущества</Htag>
-        <Advantages advantages={page.advantages} />
-      </>}
+      {page?.advantages && page.advantages.length > 0 && (
+        <>
+          <Htag tag='h2'>Преимущества</Htag>
+          <Advantages advantages={page.advantages} />
+        </>
+      )}
       {page?.seoText && (
         <div
           className={styles.seo}
           dangerouslySetInnerHTML={{ __html: page.seoText }}
-        />)}
+        />
+      )}
       <Htag tag='h2'>
         Получаемые навыки
       </Htag>

@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Top App</h1>
+<h3>It is my pet project with rating of different courses</h3>
 
-## Getting Started
+*Made on Feature-Sliced Design (FSD) architectural methodology.*
 
-First, run the development server:
+Stack of technologies: NextJS, React, TypeScript, SCSS, Eslint, Stylelint, husky pre-comit.
+<p>
+<img src="https://logowik.com/content/uploads/images/nextjs7685.logowik.com.webp" width="50px" height="50px" alt="NextJS" />
+<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width="50px" height="50px" alt="React" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="50px" height="50px" alt="TS" />
+<img src="https://sass-lang.com/assets/img/styleguide/seal-color-reversed.png" width="50px" height="50px" alt="Sass" />
+<img src="https://images.credly.com/images/e6eebd0c-6a17-4c06-b172-02ca9f6beb06/eslint.png" width="50px" height="50px" alt="Eslint" />
+<img src="https://avatars.githubusercontent.com/u/10076935?s=280&v=4" width="50px" height="50px" alt="stylelint" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Start the project
 ```
+npm install - install dependencies
+npm run dev - frontend in dev mode
+```
+----
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start frontend project on NextJS dev server
+- `npm run build` - Build in prod mode
+- `npm run start` - Start in prod mode
+- `npm run lint:ts` - Lint ts files
+- `npm run lint:ts:fix` - Fix ts files by linter
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+----
 
-## Learn More
+## Project architecture
 
-To learn more about Next.js, take a look at the following resources:
+Project made on metoology Feature sliced design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Link to documentation - [feature sliced design](https://feature-sliced.design/docs/get-started/tutorial)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+----

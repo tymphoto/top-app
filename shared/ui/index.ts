@@ -1,10 +1,13 @@
-export { Advantages } from './Advantages';
+export { Advantages } from "./Advantages";
 export { Button } from "./Button";
-export { Card } from './Card';
+export { Card } from "./Card";
 export { Htag } from "./Htag";
 export { HhDataCard } from "./HhDataCard";
 export { Paragraph } from "./Paragraph";
 export { Tag } from "./Tag";
 export { Rating } from "./Rating";
-export { Sort } from './Sort';
-export { Search } from './Search';
+export { Sort } from "./Sort";
+export { Search } from "./Search";
+export { Input } from "./Input";
+export { Textarea } from "./Textarea";
+export { Divider } from "./Devider";

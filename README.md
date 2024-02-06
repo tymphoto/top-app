@@ -5,7 +5,7 @@
 
 Stack of technologies: NextJS, React, TypeScript, SCSS, Eslint, Stylelint, husky pre-comit.
 <p>
-<img src="https://logowik.com/content/uploads/images/nextjs7685.logowik.com.webp" width="50px" height="50px" alt="NextJS" />
+<img src="https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png" width="50px" height="50px" alt="NextJS" />
 <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" width="50px" height="50px" alt="React" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="50px" height="50px" alt="TS" />
 <img src="https://sass-lang.com/assets/img/styleguide/seal-color-reversed.png" width="50px" height="50px" alt="Sass" />

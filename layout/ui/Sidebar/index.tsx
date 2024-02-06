@@ -3,6 +3,7 @@ import cn from 'classnames';
 import styles from './styles.module.scss';
 import { Menu } from '../Menu';
 import Logo from '@/shared/assets/SidebarLogo.svg';
+import { Search } from '@/shared';
 
 interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> { }
 
@@ -16,9 +17,7 @@ export const Sidebar = ({
       {...props}
     >
       <Logo className={styles.logo} />
-      <div>
-        Поиск
-      </div>
+      <Search />
       <Menu />
     </div>
   );

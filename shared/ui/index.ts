@@ -7,3 +7,4 @@ export { Paragraph } from "./Paragraph";
 export { Tag } from "./Tag";
 export { Rating } from "./Rating";
 export { Sort } from './Sort';
+export { Search } from './Search';

@@ -80,6 +80,7 @@ export const Menu = (): JSX.Element => {
       <div>
         {pages.map((page) => (
           <Link
+            key={page._id}
             href={`/${route}/${page.alias}`}
             className={cn(styles.thirdLevel, {
               [styles.thirdLevelActive]: `/${route}/${page.alias}` === pathname,

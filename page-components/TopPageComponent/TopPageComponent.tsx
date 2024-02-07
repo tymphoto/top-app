@@ -58,13 +58,6 @@ export const TopPageComponent = ({
         <Sort sort={sort} setSort={setSort} />
       </div>
       <div role='list'>
-        {sortedProducts && sortedProducts.map((p) => (
-          <div key={p._id}>
-            {p.title}
-          </div>
-        ))}
-      </div>
-      <div role='list'>
         {sortedProducts && sortedProducts.map(p => (
           <Product
             role='listitem'

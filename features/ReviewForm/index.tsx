@@ -17,12 +17,19 @@ import { IReviewForm, IReviewSentResponse } from './types';
 import CloseIcon from './close.svg';
 import styles from './styles.module.scss';
 
-interface ReviewFormProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface ReviewFormProps extends DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>, HTMLDivElement
+> {
   productId: string;
   isOpened: boolean;
 }
 
-export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewFormProps): JSX.Element => {
+export const ReviewForm = ({
+  productId,
+  isOpened,
+  className,
+  ...props
+}: ReviewFormProps): JSX.Element => {
   const {
     register,
     control,
@@ -31,6 +38,7 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
     reset,
     clearErrors
   } = useForm<IReviewForm>();
+
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>();
 
@@ -123,16 +131,21 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
           <CloseIcon />
         </button>
       </div>}
-      {error && <div className={cn(styles.error, styles.panel)} role="alert">
-        Что-то пошло не так, попробуйте обновить страницу
-        <button
-          onClick={() => setError(undefined)}
-          className={styles.close}
-          aria-label="Закрыть оповещение"
+      {error && (
+        <div
+          className={cn(styles.error, styles.panel)}
+          role="alert"
         >
-          <CloseIcon />
-        </button>
-      </div>}
+          Что-то пошло не так, попробуйте обновить страницу
+          <button
+            onClick={() => setError(undefined)}
+            className={styles.close}
+            aria-label="Закрыть оповещение"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+      )}
     </form>
   );
 };

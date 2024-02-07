@@ -8,6 +8,10 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.2;
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .primary {
@@ -16,6 +20,10 @@
 
   &:hover {
     background-color: var(--primary-hover);
+
+    &:disabled {
+      cursor: no-drop;
+    }
   }
 }
 
@@ -27,6 +35,10 @@
   &:hover {
     background-color: var(--primary);
     color: var(--white);
+
+    &:disabled {
+      cursor: no-drop;
+    }
   }
 }
 

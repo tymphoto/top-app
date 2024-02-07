@@ -113,7 +113,7 @@ export const Product = motion(forwardRef(
           </div>
           <div className={styles.rateTitle}>
             <a
-              href="#ref"
+              href={`#ref`}
               onClick={scrollToReview}
             >
               {product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
@@ -160,6 +160,7 @@ export const Product = motion(forwardRef(
               className={styles.reviewButton}
               onClick={() => setIsReviewOpened(!isReviewOpened)}
               aria-expanded={isReviewOpened}
+              disabled={!product.reviews.length}
             >
               Читать отзывы
             </Button>

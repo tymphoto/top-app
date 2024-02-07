@@ -14,9 +14,13 @@ export const Input = forwardRef((
 ): JSX.Element => {
   return (
     <div className={cn(className, styles.inputWrapper)}>
-      <input className={cn(styles.input, {
-        [styles.error]: error
-      })} ref={ref} {...props} />
+      <input
+        className={cn(styles.input, {
+          [styles.error]: error
+        })}
+        ref={ref}
+        {...props}
+      />
       {error && (
         <span
           role="alert"

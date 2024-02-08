@@ -2,7 +2,7 @@ import axios from 'axios';
 import { GetStaticPropsContext } from 'next';
 import { notFound } from 'next/navigation';
 import { ParsedUrlQuery } from 'querystring';
-import { type TopPageModel, type MenuItem, ProductModel, TopLevelCategory } from '@/shared';
+import { type TopPageModel, type MenuItem, ProductModel, TopLevelCategory } from '@/shared/types';
 import { firstLevelMenu } from '@/helpers';
 import CoursePage from './course-page';
 

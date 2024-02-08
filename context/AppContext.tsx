@@ -1,6 +1,6 @@
 "use client";
 import { createContext, PropsWithChildren, useState } from "react";
-import { MenuItem, TopLevelCategory } from "@/shared";
+import { MenuItem, TopLevelCategory } from "@/shared/types";
 
 export interface IAppContext {
   menu: MenuItem[];

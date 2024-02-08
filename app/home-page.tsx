@@ -7,8 +7,8 @@ import {
   Paragraph,
   Rating,
   Tag,
-  type MenuItem
-} from '@/shared';
+} from '@/shared/ui';
+import { MenuItem } from '@/shared/types';
 
 interface HomeWidgetProps extends Record<string, unknown> {
   menu: MenuItem[];

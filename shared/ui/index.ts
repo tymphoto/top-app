@@ -11,3 +11,5 @@ export { Search } from "./Search";
 export { Input } from "./Input";
 export { Textarea } from "./Textarea";
 export { Divider } from "./Devider";
+export { UpButton } from "./UpButton";
+export { IconButton } from "./IconButton";

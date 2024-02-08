@@ -1,6 +1,6 @@
 import axios from "axios";
 import { firstLevelMenu } from "@/helpers";
-import { MenuItem, TopLevelCategory } from "@/shared";
+import { MenuItem, TopLevelCategory } from "@/shared/types";
 import CoursesPage from "./courses-page";
 import { notFound } from "next/navigation";
 import { ParsedUrlQuery } from "querystring";

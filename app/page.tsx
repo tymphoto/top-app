@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { type MenuItem } from '@/shared';
+import { MenuItem } from '@/shared/types';
 import HomePage from './home-page';
 
 const firstCategory = 0;

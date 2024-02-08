@@ -3,7 +3,7 @@ import { withLayout } from '@/layout';
 import {
   type MenuItem,
   TopLevelCategory,
-} from '@/shared';
+} from '@/shared/types';
 
 interface CoursesPagePageProps extends Record<string, unknown> {
   menu?: MenuItem[];

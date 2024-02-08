@@ -1,9 +1,17 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  ReactNode
+} from "react";
+import { motion } from "framer-motion";
 import ArrowIcon from '../../assets/Arrow.svg';
 import styles from './styles.module.scss';
 import cn from 'classnames';
 
-interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface ButtonProps extends Omit<
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+  'onAnimationStart' | 'onDragStart' | 'onDragEnd' | 'onDrag' | 'ref'
+> {
   className?: string;
   children: ReactNode;
   variant: 'primary' | 'ghost';
@@ -18,7 +26,8 @@ export const Button = ({
   ...props
 }: ButtonProps): ReactNode => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
       className={cn(
         styles.button,
         {
@@ -37,6 +46,6 @@ export const Button = ({
           <ArrowIcon />
         </span>
       )}
-    </button>
+    </motion.button>
   );
 };

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { UpButton } from '@/shared/ui';
 import { Header } from '../Header';
 import { Sidebar } from '../Sidebar';
 import { Footer } from '../Footer';
@@ -19,6 +20,7 @@ export const Layout = ({
         {children}
       </div>
       <Footer className={styles.footer} />
+      <UpButton />
     </div>
   );
 };

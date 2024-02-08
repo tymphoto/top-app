@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopPageAdvantage } from '@/shared';
+import { TopPageAdvantage } from '@/shared/types';
 import CheckIcon from './check.svg';
 import styles from './styles.module.scss';
 

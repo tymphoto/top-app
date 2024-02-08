@@ -6,7 +6,7 @@ import {
   type TopPageModel,
   type ProductModel,
   TopLevelCategory,
-} from '@/shared';
+} from '@/shared/types';
 
 interface CoursePageProps extends Record<string, unknown> {
   menu?: MenuItem[];

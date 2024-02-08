@@ -1,5 +1,5 @@
 "use client";
-import { withLayout } from '@/layout';
+import { withLayout } from '@/shared/layout';
 import { TopPageComponent } from '@/page-components';
 import {
   type MenuItem,

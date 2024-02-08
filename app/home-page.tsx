@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { withLayout } from '@/layout';
+import { withLayout } from '@/shared/layout';
 import {
   Button,
   Htag,

@@ -1,9 +1,9 @@
 .wrapper {
   display: grid;
   grid-template-areas:
-    ". header header ."
-    ". sidebar body ."
-    "footer footer footer footer";
+    '. header header .'
+    '. sidebar body .'
+    'footer footer footer footer';
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 230px minmax(320px, 1200px) auto;
   gap: 40px 30px;
@@ -28,10 +28,10 @@
 }
 
 .skipLink {
-  display: block;
   position: fixed;
-  left: 100px;
   top: 0;
+  left: 100px;
+  display: block;
   overflow: hidden;
   height: 0;
   background: var(--primary);
@@ -49,9 +49,9 @@
 
   .wrapper {
     grid-template-areas:
-      "header"
-      "body"
-      "footer";
+      'header'
+      'body'
+      'footer';
     grid-template-columns: minmax(320px, 1fr);
   }
 

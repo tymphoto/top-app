@@ -60,8 +60,8 @@ export const Rating = forwardRef((
             [styles.filled]: i < currentRating,
             [styles.editable]: isEditable
           })}
-          onMouseEnter={() => changeDispay(i + 1)}
-          onMouseLeave={() => changeDispay(rating)}
+          onMouseEnter={() => changeDisplay(i + 1)}
+          onMouseLeave={() => changeDisplay(rating)}
           onClick={() => onClick(i + 1)}
           tabIndex={computeFocus(rating, i)}
           onKeyDown={handleKey}
@@ -81,7 +81,7 @@ export const Rating = forwardRef((
     setRatingArray(updatedArray);
   };
 
-  const changeDispay = (i: number) => {
+  const changeDisplay = (i: number) => {
     if (!isEditable) {
       return;
     }

@@ -41,7 +41,7 @@ export const Product = motion(forwardRef((
   };
 
   const scrollToReview = () => {
-    setIsReviewOpened(true);
+    setIsReviewOpened((prev) => !prev);
     reviewRef.current?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -73,7 +73,7 @@ export const Product = motion(forwardRef((
           </span>
           {product.oldPrice && (
             <Tag className={styles.oldPrice} color="green">
-              <span className="visualyHidden">
+              <span className="visuallyHidden">
                 скидка
               </span>
               {' '}
@@ -82,10 +82,11 @@ export const Product = motion(forwardRef((
           )}
         </div>
         <div className={styles.credit}>
+          <span className="visuallyHidden">кредит</span>
           {priceRu(product.credit)}/<span className={styles.month}>мес</span>
         </div>
         <div className={styles.rating}>
-          <span className="visualyHidden">
+          <span className="visuallyHidden">
             {`рейтинг ${Number(product.reviewAvg).toFixed(2) ?? Number(product.initialRating).toFixed(2)}`}
           </span>
           <Rating rating={product.reviewAvg ?? product.initialRating} />

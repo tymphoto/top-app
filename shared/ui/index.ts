@@ -13,3 +13,4 @@ export { Textarea } from "./Textarea";
 export { Divider } from "./Devider";
 export { UpButton } from "./UpButton";
 export { IconButton } from "./IconButton";
+export { Loader } from './Loader';

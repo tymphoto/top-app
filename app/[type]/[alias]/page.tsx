@@ -1,8 +1,14 @@
 import axios from 'axios';
 import { GetStaticPropsContext } from 'next';
+import Head from 'next/head';
 import { notFound } from 'next/navigation';
 import { ParsedUrlQuery } from 'querystring';
-import { type TopPageModel, type MenuItem, ProductModel, TopLevelCategory } from '@/shared/types';
+import {
+  type TopPageModel,
+  type MenuItem,
+  ProductModel,
+  TopLevelCategory
+} from '@/shared/types';
 import { firstLevelMenu } from '@/helpers';
 import CoursePage from './course-page';
 
@@ -66,8 +72,17 @@ export default async function Alias({
 }) {
   const { menu, page, products } = await getPage({ params });
   return (
-    <main>
-      <CoursePage menu={menu || []} page={page} products={products} firstCategory={TopLevelCategory.Courses} />
-    </main>
+    <>
+      <Head>
+        <title>{page?.metaTitle}</title>
+        <meta name="description" content={page?.metaDescription} />
+        <meta property="og:title" content={page?.metaTitle} />
+        <meta property="og:description" content={page?.metaDescription} />
+        <meta property="og:type" content="article" />
+      </Head>
+      <main>
+        <CoursePage menu={menu || []} page={page} products={products} firstCategory={TopLevelCategory.Courses} />
+      </main>
+    </>
   );
 }

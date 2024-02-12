@@ -1,63 +1,31 @@
 "use client";
-import { useState } from 'react';
 import { withLayout } from '@/shared/layout';
 import {
-  Button,
+  Card,
+  Divider,
   Htag,
-  Paragraph,
-  Rating,
-  Tag,
+  Paragraph
 } from '@/shared/ui';
-import { MenuItem } from '@/shared/types';
+import styles from './styles.module.scss';
 
-interface HomeWidgetProps extends Record<string, unknown> {
-  menu: MenuItem[];
-  firstCategory?: number;
-}
-
-async function HomePage({ menu }: HomeWidgetProps) {
-  const [rating, setRating] = useState<number>(4);
+async function HomePage() {
   return (
     <main>
-      <Htag tag='h1'>
-        Home
-      </Htag>
-      <Button
-        variant='primary'
-        arrow='right'
-      >
-        CLICK
-      </Button>
-      <Button
-        variant='ghost'
-        arrow='down'
-      >
-        CLICK
-      </Button>
-      <Paragraph size='l'>
-        Большой
-      </Paragraph>
-      <Paragraph size='m'>
-        Средний
-      </Paragraph>
-      <Paragraph size='s'>
-        маленький
-      </Paragraph>
-      <Tag color='red' href='http://hh.ru'>
-        hh.ru
-      </Tag>
-      <Rating
-        rating={rating}
-        setRating={setRating}
-        isEditable
-      />
-      <ul>
-        {menu.map((el) => (
-          <li key={el._id.secondCategory}>
-            {el._id.secondCategory}
-          </li>
-        ))}
-      </ul>
+      <Card className={styles.card}>
+        <Htag tag='h1'>
+          Добро пожаловать в приложение Top-app!
+        </Htag>
+        <Divider />
+        <Htag tag='h3'>
+          С помощью этого приложения Вы сможете выбрать и сравнить необходимый именно Вам обучающий курс
+        </Htag>
+        <Paragraph>
+          Переходите в интересующий Вас раздел и ознакомьтесь с ценами и отзывами на различные предложения.
+        </Paragraph>
+        <Paragraph>
+          Также Вы можете оставить отзыв о курсе, которым уже воспользовались.
+        </Paragraph>
+      </Card>
     </main>
   );
 }

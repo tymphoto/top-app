@@ -8,7 +8,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import cn from 'classnames';
 import { IconButton } from '@/shared/ui';
-import Logo from '@/shared/assets/SidebarLogo.svg';
+import Logo from '../../../assets/SidebarLogo.svg';
 import { Sidebar } from '../Sidebar';
 import styles from './styles.module.scss';
 

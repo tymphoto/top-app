@@ -2,7 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 import { Menu } from '../Menu';
-import Logo from '@/shared/assets/SidebarLogo.svg';
+import Logo from '../../../assets/SidebarLogo.svg';
 import { Search } from '@/shared/ui';
 
 interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> { }

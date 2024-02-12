@@ -1,7 +1,7 @@
-import CoursesIcon from '@/shared/assets/graduation-hat.svg';
-import CloudIcon from '@/shared/assets/cloud.svg';
-import BookIcon from '@/shared/assets/book.svg';
-import BoxIcon from '@/shared/assets/box.svg';
+import CoursesIcon from './assets/Graduation-hat.svg';
+import CloudIcon from './assets/Cloud.svg';
+import BookIcon from './assets/Book.svg';
+import BoxIcon from './assets/Box.svg';
 import { FirstLevelMenuItem, TopLevelCategory } from '@/shared/types';
 
 export const firstLevelMenu: FirstLevelMenuItem[] = [
